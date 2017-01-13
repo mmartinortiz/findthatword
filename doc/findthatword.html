@@ -1,0 +1,238 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module findthatword</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>findthatword</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/jonny/Documents/python workspace/wordsearch_v2/src/findthatword.py">/home/jonny/Documents/python workspace/wordsearch_v2/src/findthatword.py</a></font></td></tr></table>
+    <p><tt>Copyright&nbsp;2009&nbsp;Jonny&nbsp;Jones&nbsp;and&nbsp;Ieuan&nbsp;Jones<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;<a href="#FindThatWord">FindThatWord</a>.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FindThatWord">FindThatWord</a>&nbsp;is&nbsp;free&nbsp;software:&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+&nbsp;&nbsp;&nbsp;&nbsp;it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;Free&nbsp;Software&nbsp;Foundation,&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;program&nbsp;is&nbsp;distributed&nbsp;in&nbsp;the&nbsp;hope&nbsp;that&nbsp;it&nbsp;will&nbsp;be&nbsp;useful,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;but&nbsp;WITHOUT&nbsp;ANY&nbsp;WARRANTY;&nbsp;without&nbsp;even&nbsp;the&nbsp;implied&nbsp;warranty&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;MERCHANTABILITY&nbsp;or&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE.&nbsp;&nbsp;See&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;for&nbsp;more&nbsp;details.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;You&nbsp;should&nbsp;have&nbsp;received&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License<br>
+&nbsp;&nbsp;&nbsp;&nbsp;along&nbsp;with&nbsp;this&nbsp;program.&nbsp;&nbsp;If&nbsp;not,&nbsp;see&nbsp;&lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="cPickle.html">cPickle</a><br>
+<a href="cairo.html">cairo</a><br>
+<a href="copy.html">copy</a><br>
+<a href="datetime.html">datetime</a><br>
+</td><td width="25%" valign=top><a href="gnomevfs.html">gnomevfs</a><br>
+<a href="gobject.html">gobject</a><br>
+<a href="gtk.html">gtk</a><br>
+<a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="pango.html">pango</a><br>
+<a href="pangocairo.html">pangocairo</a><br>
+<a href="pygtk.html">pygtk</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+<a href="string.html">string</a><br>
+<a href="sys.html">sys</a><br>
+<a href="time.html">time</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="findthatword.html#FindThatWord">FindThatWord</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FindThatWord">class <strong>FindThatWord</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>GTK-based&nbsp;wordsearch&nbsp;puzzle<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="FindThatWord-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>initialise&nbsp;a&nbsp;new&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-confirm_lose_changes"><strong>confirm_lose_changes</strong></a>(self)</dt><dd><tt>Ask&nbsp;the&nbsp;user&nbsp;whether&nbsp;they&nbsp;really&nbsp;want&nbsp;to&nbsp;lose&nbsp;their&nbsp;changes.<br>
+Returns&nbsp;True&nbsp;or&nbsp;False</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-display_failure"><strong>display_failure</strong></a>(self)</dt><dd><tt>Display&nbsp;warning&nbsp;that&nbsp;puzzle&nbsp;could&nbsp;not&nbsp;be&nbsp;completed</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-draw_as_cairo"><strong>draw_as_cairo</strong></a>(self, surface, size_x, size_y, margin_top, margin_right, margin_bottom, margin_left, dpi, highlight_selected)</dt><dd><tt>Draws&nbsp;the&nbsp;puzzle&nbsp;onto&nbsp;a&nbsp;cairo&nbsp;surface.&nbsp;&nbsp;dpi&nbsp;is&nbsp;the&nbsp;number&nbsp;of&nbsp;desired&nbsp;pixels&nbsp;per&nbsp;'inch'&nbsp;-&nbsp;on&nbsp;the&nbsp;screen,&nbsp;this&nbsp;is&nbsp;a&nbsp;<br>
+scaled&nbsp;inch&nbsp;that&nbsp;represents&nbsp;on&nbsp;inch&nbsp;on&nbsp;the&nbsp;final&nbsp;printed&nbsp;output</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-draw_as_pdf"><strong>draw_as_pdf</strong></a>(self, filename)</dt><dd><tt>Write&nbsp;a&nbsp;PDF&nbsp;containing&nbsp;the&nbsp;puzzle&nbsp;to&nbsp;filname</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-draw_as_png"><strong>draw_as_png</strong></a>(self, filename)</dt><dd><tt>Write&nbsp;a&nbsp;PNG&nbsp;containing&nbsp;the&nbsp;puzzle&nbsp;to&nbsp;filname</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-draw_as_svg"><strong>draw_as_svg</strong></a>(self, filename)</dt><dd><tt>Write&nbsp;a&nbsp;PNG&nbsp;containing&nbsp;the&nbsp;puzzle&nbsp;to&nbsp;filname</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-draw_as_text"><strong>draw_as_text</strong></a>(self, filename)</dt><dd><tt>Write&nbsp;a&nbsp;text&nbsp;stream&nbsp;containing&nbsp;the&nbsp;puzzle&nbsp;to&nbsp;filname</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-draw_as_widget"><strong>draw_as_widget</strong></a>(self)</dt><dd><tt>Draw&nbsp;the&nbsp;puzzle&nbsp;onto&nbsp;the&nbsp;ResultsArea&nbsp;screen&nbsp;widget</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-draw_to_printer"><strong>draw_to_printer</strong></a>(self, print_operation, print_context, page_no)</dt><dd><tt>Render&nbsp;the&nbsp;puzzle&nbsp;to&nbsp;the&nbsp;provided&nbsp;print&nbsp;surface</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-export_file"><strong>export_file</strong></a>(self)</dt><dd><tt>Open&nbsp;a&nbsp;Export&nbsp;dialogue&nbsp;and&nbsp;export&nbsp;the&nbsp;file&nbsp;in&nbsp;the&nbsp;format&nbsp;specified&nbsp;by&nbsp;the&nbsp;user</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-load_file"><strong>load_file</strong></a>(self, filename, type<font color="#909090">='URI'</font>)</dt><dd><tt>Opens&nbsp;the&nbsp;FTW&nbsp;file&nbsp;with&nbsp;a&nbsp;the&nbsp;supplied&nbsp;URI&nbsp;or&nbsp;filename&nbsp;and&nbsp;returns&nbsp;True&nbsp;if&nbsp;successful.&nbsp;&nbsp;We<br>
+prefer&nbsp;to&nbsp;work&nbsp;with&nbsp;URIs&nbsp;than&nbsp;files,&nbsp;as&nbsp;they're&nbsp;easier&nbsp;to&nbsp;add&nbsp;to&nbsp;the&nbsp;recent&nbsp;file&nbsp;list.&nbsp;&nbsp;In&nbsp;the<br>
+interests&nbsp;of&nbsp;simplicity,&nbsp;we&nbsp;only&nbsp;add&nbsp;URIs&nbsp;to&nbsp;the&nbsp;recent&nbsp;file&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-new_puzzle"><strong>new_puzzle</strong></a>(self)</dt><dd><tt>Start&nbsp;a&nbsp;new&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_AddButton_clicked"><strong>on_AddButton_clicked</strong></a>(self, widget)</dt><dd><tt>Add&nbsp;a&nbsp;word&nbsp;to&nbsp;the&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_ApplyButton_clicked"><strong>on_ApplyButton_clicked</strong></a>(self, widget)</dt><dd><tt>Update&nbsp;the&nbsp;word&nbsp;being&nbsp;edited</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_AscendingButton_clicked"><strong>on_AscendingButton_clicked</strong></a>(self, widget)</dt><dd><tt>Sort&nbsp;the&nbsp;puzzle&nbsp;words&nbsp;alphabetically</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_CancelButton_clicked"><strong>on_CancelButton_clicked</strong></a>(self, widget)</dt><dd><tt>Cancel&nbsp;editing&nbsp;the&nbsp;word</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_DeleteButton_clicked"><strong>on_DeleteButton_clicked</strong></a>(self, widget)</dt><dd><tt>Delete&nbsp;a&nbsp;word&nbsp;from&nbsp;the&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_EditButton_clicked"><strong>on_EditButton_clicked</strong></a>(self, widget)</dt><dd><tt>Edit&nbsp;a&nbsp;word&nbsp;that&nbsp;already&nbsp;exists&nbsp;in&nbsp;the&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_FileExportMenuItem_activate"><strong>on_FileExportMenuItem_activate</strong></a>(self, widget)</dt><dd><tt>File&nbsp;&gt;&nbsp;Export&nbsp;menu&nbsp;item</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_FileNewMenuItem_activate"><strong>on_FileNewMenuItem_activate</strong></a>(self, widget)</dt><dd><tt>File&nbsp;|&nbsp;New&nbsp;-&nbsp;Start&nbsp;a&nbsp;new&nbsp;project&nbsp;file,&nbsp;blank&nbsp;out<br>
+the&nbsp;current&nbsp;project&nbsp;and&nbsp;start&nbsp;from&nbsp;scratch</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_FileOpenMenuItem_activate"><strong>on_FileOpenMenuItem_activate</strong></a>(self, widget)</dt><dd><tt>File&nbsp;&gt;&nbsp;Open&nbsp;menu&nbsp;item</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_FilePageSetupMenuItem_activate"><strong>on_FilePageSetupMenuItem_activate</strong></a>(self, widget)</dt><dd><tt>File&nbsp;&gt;&nbsp;Page&nbsp;setup&nbsp;menmu&nbsp;item</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_FilePrintMenuItem_activate"><strong>on_FilePrintMenuItem_activate</strong></a>(self, widget)</dt></dl>
+
+<dl><dt><a name="FindThatWord-on_FileQuitMenuItem_activate"><strong>on_FileQuitMenuItem_activate</strong></a>(self, widget)</dt><dd><tt>Leave&nbsp;the&nbsp;application</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_FileSaveAsMenuItem_activate"><strong>on_FileSaveAsMenuItem_activate</strong></a>(self, widget)</dt><dd><tt>File&nbsp;&gt;&nbsp;Save&nbsp;As&nbsp;menu&nbsp;item</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_FileSaveMenuItem_activate"><strong>on_FileSaveMenuItem_activate</strong></a>(self, widget)</dt><dd><tt>File&nbsp;&gt;&nbsp;Save&nbsp;menu&nbsp;item</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_ForceSizeCheckButton_toggled"><strong>on_ForceSizeCheckButton_toggled</strong></a>(self, widget)</dt><dd><tt>Toggle&nbsp;the&nbsp;forced-size&nbsp;option&nbsp;and&nbsp;resize&nbsp;as&nbsp;appropriate</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_HelpAboutMenuItem_activate"><strong>on_HelpAboutMenuItem_activate</strong></a>(self, widget)</dt><dd><tt>Help&nbsp;&gt;&nbsp;About&nbsp;Menu&nbsp;Item</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_HiddenMessageCheckButton_toggled"><strong>on_HiddenMessageCheckButton_toggled</strong></a>(self, widget)</dt><dd><tt>Toggle&nbsp;the&nbsp;hidden&nbsp;message&nbsp;option</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_HiddenMessageEntry_changed"><strong>on_HiddenMessageEntry_changed</strong></a>(self, widget)</dt><dd><tt>Update&nbsp;the&nbsp;hidden&nbsp;message</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_MainWindow_delete_event"><strong>on_MainWindow_delete_event</strong></a>(self, widget, response)</dt><dd><tt>Intercept&nbsp;main&nbsp;window&nbsp;closure&nbsp;if&nbsp;data&nbsp;is&nbsp;unsaved</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_MainWindow_destroy"><strong>on_MainWindow_destroy</strong></a>(self, widget)</dt><dd><tt>Quit&nbsp;the&nbsp;main&nbsp;application</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_MoveDownButton_clicked"><strong>on_MoveDownButton_clicked</strong></a>(self, widget)</dt><dd><tt>Move&nbsp;a&nbsp;word&nbsp;down&nbsp;in&nbsp;the&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_MoveUpButton_clicked"><strong>on_MoveUpButton_clicked</strong></a>(self, widget)</dt><dd><tt>Move&nbsp;a&nbsp;word&nbsp;up&nbsp;in&nbsp;the&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_NarrativeWidget_changed"><strong>on_NarrativeWidget_changed</strong></a>(self, widget)</dt><dd><tt>Change&nbsp;made&nbsp;to&nbsp;puzzle&nbsp;narrative</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_NewDescriptionEntry_changed"><strong>on_NewDescriptionEntry_changed</strong></a>(self, widget)</dt><dd><tt>Enable&nbsp;/&nbsp;disable&nbsp;the&nbsp;Add&nbsp;/&nbsp;Update&nbsp;buttons&nbsp;according&nbsp;to&nbsp;the&nbsp;newly&nbsp;typed&nbsp;word</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_NewIcon_clicked"><strong>on_NewIcon_clicked</strong></a>(self, widget)</dt><dd><tt>New&nbsp;icon&nbsp;clicked</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_NewWordEntry_changed"><strong>on_NewWordEntry_changed</strong></a>(self, widget)</dt><dd><tt>Enable&nbsp;/&nbsp;disable&nbsp;the&nbsp;Add&nbsp;/&nbsp;Update&nbsp;buttons&nbsp;according&nbsp;to&nbsp;the&nbsp;newly&nbsp;typed&nbsp;word</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_OpenIcon_clicked"><strong>on_OpenIcon_clicked</strong></a>(self, widget)</dt><dd><tt>Open&nbsp;icon&nbsp;clicked</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_PrintIcon_clicked"><strong>on_PrintIcon_clicked</strong></a>(self, widget)</dt><dd><tt>Print&nbsp;icon&nbsp;clicked</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_PuzzleTitleEntry_changed"><strong>on_PuzzleTitleEntry_changed</strong></a>(self, widget)</dt><dd><tt>Change&nbsp;made&nbsp;to&nbsp;puzzle&nbsp;title</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_RecentChooser_activate"><strong>on_RecentChooser_activate</strong></a>(self, widget)</dt><dd><tt>Open&nbsp;a&nbsp;file&nbsp;from&nbsp;the&nbsp;recently&nbsp;used&nbsp;files&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_RefreshIcon_clicked"><strong>on_RefreshIcon_clicked</strong></a>(self, widget)</dt><dd><tt>Refresh&nbsp;icon&nbsp;clicked</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_ResultsArea_expose_event"><strong>on_ResultsArea_expose_event</strong></a>(self, widget, signal)</dt><dd><tt>Draw&nbsp;the&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_SaveIcon_clicked"><strong>on_SaveIcon_clicked</strong></a>(self, widget)</dt><dd><tt>Save&nbsp;icon&nbsp;clicked</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_ShowGridCheckButton_toggled"><strong>on_ShowGridCheckButton_toggled</strong></a>(self, widget)</dt><dd><tt>Toggle&nbsp;the&nbsp;show&nbsp;entire&nbsp;solution&nbsp;option&nbsp;and&nbsp;print&nbsp;if&nbsp;its&nbsp;working</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_ShowSolutionCheckButton_toggled"><strong>on_ShowSolutionCheckButton_toggled</strong></a>(self, widget)</dt><dd><tt>Toggle&nbsp;the&nbsp;show&nbsp;solution&nbsp;options&nbsp;and&nbsp;print&nbsp;if&nbsp;its&nbsp;working</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_ShowTitleCheckButton_toggled"><strong>on_ShowTitleCheckButton_toggled</strong></a>(self, widget)</dt><dd><tt>Toggle&nbsp;the&nbsp;show&nbsp;entire&nbsp;solution&nbsp;option&nbsp;and&nbsp;print&nbsp;if&nbsp;its&nbsp;working</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_ShowWordlistCheckButton_toggled"><strong>on_ShowWordlistCheckButton_toggled</strong></a>(self, widget)</dt><dd><tt>Toggle&nbsp;the&nbsp;show&nbsp;entire&nbsp;solution&nbsp;option&nbsp;and&nbsp;print&nbsp;if&nbsp;its&nbsp;working</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_WordsListWidgetSelection_changed"><strong>on_WordsListWidgetSelection_changed</strong></a>(self, widget)</dt><dd><tt>New&nbsp;word&nbsp;selected&nbsp;in&nbsp;the&nbsp;wordlist&nbsp;widget</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_xSpin_output"><strong>on_xSpin_output</strong></a>(self, widget)</dt><dd><tt>Increase&nbsp;or&nbsp;decrease&nbsp;the&nbsp;puzzle's&nbsp;forced&nbsp;width</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-on_ySpin_output"><strong>on_ySpin_output</strong></a>(self, widget)</dt><dd><tt>Increase&nbsp;or&nbsp;decrease&nbsp;the&nbsp;puzzle's&nbsp;forced&nbsp;height</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-open_file_with_dialog"><strong>open_file_with_dialog</strong></a>(self)</dt><dd><tt>Open&nbsp;an&nbsp;Open&nbsp;dialogue&nbsp;and&nbsp;opens&nbsp;the&nbsp;selected&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-save_file"><strong>save_file</strong></a>(self)</dt><dd><tt>Save&nbsp;the&nbsp;file.&nbsp;&nbsp;The&nbsp;filename&nbsp;must&nbsp;already&nbsp;have&nbsp;been&nbsp;set</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-save_file_as"><strong>save_file_as</strong></a>(self)</dt><dd><tt>Open&nbsp;a&nbsp;Save&nbsp;As&nbsp;dialogue&nbsp;and&nbsp;save&nbsp;the&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-set_dirty"><strong>set_dirty</strong></a>(self, dirty)</dt><dd><tt>Make&nbsp;the&nbsp;puzzle&nbsp;dirty&nbsp;or&nbsp;clean&nbsp;and&nbsp;update&nbsp;the&nbsp;title&nbsp;bar&nbsp;and<br>
+save&nbsp;icons&nbsp;accordingly</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-set_edit_mode"><strong>set_edit_mode</strong></a>(self, edit_mode)</dt><dd><tt>Edit&nbsp;mode&nbsp;indicates&nbsp;that&nbsp;a&nbsp;word&nbsp;in&nbsp;the&nbsp;wordlist&nbsp;is&nbsp;being&nbsp;edited</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-set_filename"><strong>set_filename</strong></a>(self, filename, uri, auto_extension<font color="#909090">=True</font>)</dt><dd><tt>Change&nbsp;the&nbsp;puzzle's&nbsp;filename&nbsp;and&nbsp;optionally&nbsp;correct&nbsp;the<br>
+file&nbsp;extension</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-show_print_dialogue"><strong>show_print_dialogue</strong></a>(self)</dt><dd><tt>Display&nbsp;a&nbsp;print&nbsp;dialogue&nbsp;box&nbsp;and&nbsp;print&nbsp;the&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-update_add_button"><strong>update_add_button</strong></a>(self)</dt><dd><tt>Enable&nbsp;or&nbsp;disable&nbsp;the&nbsp;Add&nbsp;and&nbsp;Cancel&nbsp;buttons&nbsp;according&nbsp;to&nbsp;the&nbsp;contents&nbsp;of&nbsp;the<br>
+new_word_entry_widget</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-update_all_widgets"><strong>update_all_widgets</strong></a>(self)</dt><dd><tt>Redraw&nbsp;all&nbsp;widgets&nbsp;on&nbsp;screen.&nbsp;&nbsp;This&nbsp;has&nbsp;the&nbsp;effect&nbsp;of&nbsp;making<br>
+the&nbsp;puzzle&nbsp;dirty</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-update_ascending_button"><strong>update_ascending_button</strong></a>(self)</dt><dd><tt>Enables&nbsp;or&nbsp;disables&nbsp;the&nbsp;sort&nbsp;button&nbsp;based&nbsp;on&nbsp;the&nbsp;number&nbsp;of&nbsp;words&nbsp;in&nbsp;the&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-update_grid_size_widget"><strong>update_grid_size_widget</strong></a>(self)</dt><dd><tt>Enable&nbsp;/&nbsp;disable&nbsp;the&nbsp;grid&nbsp;size&nbsp;spinners</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-update_hidden_message_widget"><strong>update_hidden_message_widget</strong></a>(self)</dt><dd><tt>Enable&nbsp;/&nbsp;disable&nbsp;the&nbsp;hidden&nbsp;message&nbsp;widget</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-update_results_area_aspect_frame"><strong>update_results_area_aspect_frame</strong></a>(self)</dt><dd><tt>Updates&nbsp;the&nbsp;aspect&nbsp;ratio&nbsp;of&nbsp;the&nbsp;results&nbsp;area</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-update_results_widget"><strong>update_results_widget</strong></a>(self)</dt><dd><tt>Redraw&nbsp;the&nbsp;puzzle&nbsp;output</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-update_save_icons"><strong>update_save_icons</strong></a>(self)</dt><dd><tt>Disable&nbsp;the&nbsp;Save&nbsp;icons&nbsp;if&nbsp;the&nbsp;puzzle&nbsp;isn't&nbsp;dirty</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-update_window_title"><strong>update_window_title</strong></a>(self)</dt><dd><tt>Set&nbsp;the&nbsp;window&nbsp;title&nbsp;based&nbsp;on&nbsp;the&nbsp;filename&nbsp;and&nbsp;whether&nbsp;the&nbsp;file&nbsp;is&nbsp;dirty</tt></dd></dl>
+
+<dl><dt><a name="FindThatWord-update_words_list"><strong>update_words_list</strong></a>(self)</dt><dd><tt>Redraw&nbsp;the&nbsp;Words_list&nbsp;widget&nbsp;by&nbsp;recreating&nbsp;the&nbsp;associated&nbsp;data&nbsp;model</tt></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>APP_NAME</strong> = 'FindThatWord'<br>
+<strong>APP_VERSION</strong> = '0.1'<br>
+<strong>AUTHORS</strong> = ['Jonny Jones', 'Ieuan Jones']<br>
+<strong>BG_COLOUR</strong> = (1, 1, 1)<br>
+<strong>COPYRIGHT</strong> = 'Copyright Jonny Jones and Ieuan Jones 2009'<br>
+<strong>FILE_EXT</strong> = 'ftw'<br>
+<strong>GRID_COLOUR</strong> = (0.5, 0.5, 0.5)<br>
+<strong>PADDING_COLOUR</strong> = (0, 0, 0)<br>
+<strong>SELECTED_COLOUR</strong> = (0.5, 0.0, 0.75, 0.59999999999999998)<br>
+<strong>WORD_COLOUR</strong> = (0.75, 0.0, 0.0, 0.29999999999999999)<br>
+<strong>a</strong> = None</td></tr></table>
+</body></html>

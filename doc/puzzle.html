@@ -1,0 +1,235 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module puzzle</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>puzzle</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/jonny/Documents/python workspace/wordsearch_v2/src/puzzle.py">/home/jonny/Documents/python workspace/wordsearch_v2/src/puzzle.py</a></font></td></tr></table>
+    <p><tt>Copyright&nbsp;2009&nbsp;Jonny&nbsp;Jones&nbsp;and&nbsp;Ieuan&nbsp;Jones<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;FindThatWord.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;FindThatWord&nbsp;is&nbsp;free&nbsp;software:&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+&nbsp;&nbsp;&nbsp;&nbsp;it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;Free&nbsp;Software&nbsp;Foundation,&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;program&nbsp;is&nbsp;distributed&nbsp;in&nbsp;the&nbsp;hope&nbsp;that&nbsp;it&nbsp;will&nbsp;be&nbsp;useful,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;but&nbsp;WITHOUT&nbsp;ANY&nbsp;WARRANTY;&nbsp;without&nbsp;even&nbsp;the&nbsp;implied&nbsp;warranty&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;MERCHANTABILITY&nbsp;or&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE.&nbsp;&nbsp;See&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;for&nbsp;more&nbsp;details.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;You&nbsp;should&nbsp;have&nbsp;received&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License<br>
+&nbsp;&nbsp;&nbsp;&nbsp;along&nbsp;with&nbsp;this&nbsp;program.&nbsp;&nbsp;If&nbsp;not,&nbsp;see&nbsp;&lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="cairo.html">cairo</a><br>
+<a href="copy.html">copy</a><br>
+<a href="gobject.html">gobject</a><br>
+</td><td width="25%" valign=top><a href="gtk.html">gtk</a><br>
+<a href="math.html">math</a><br>
+<a href="pango.html">pango</a><br>
+</td><td width="25%" valign=top><a href="pangocairo.html">pangocairo</a><br>
+<a href="random.html">random</a><br>
+<a href="string.html">string</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="puzzle.html#Grid">Grid</a>
+</font></dt><dt><font face="helvetica, arial"><a href="puzzle.html#Puzzle">Puzzle</a>
+</font></dt><dt><font face="helvetica, arial"><a href="puzzle.html#Word">Word</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Grid">class <strong>Grid</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>letter&nbsp;grid&nbsp;in&nbsp;worsdearch&nbsp;puzzle<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Grid-__init__"><strong>__init__</strong></a>(self, puzzle)</dt><dd><tt>x,&nbsp;y&nbsp;are&nbsp;the&nbsp;dimensions&nbsp;of&nbsp;the&nbsp;grid.&nbsp;&nbsp;If&nbsp;y&nbsp;isn't&nbsp;supplied,&nbsp;a&nbsp;square&nbsp;grid&nbsp;is&nbsp;assumed</tt></dd></dl>
+
+<dl><dt><a name="Grid-add_padding"><strong>add_padding</strong></a>(self)</dt><dd><tt>populate&nbsp;the&nbsp;empty&nbsp;cells&nbsp;in&nbsp;the&nbsp;grid&nbsp;with&nbsp;a&nbsp;hidden&nbsp;message</tt></dd></dl>
+
+<dl><dt><a name="Grid-clear"><strong>clear</strong></a>(self)</dt><dd><tt>Clear&nbsp;the&nbsp;grid</tt></dd></dl>
+
+<dl><dt><a name="Grid-draw_as_cairo"><strong>draw_as_cairo</strong></a>(self, surface, start_x, start_y, size_x, size_y, show_solution, selected_word, max_cell_size)</dt><dd><tt>Renders&nbsp;the&nbsp;grid&nbsp;onto&nbsp;a&nbsp;cairo&nbsp;surface.<br>
+Returns&nbsp;the&nbsp;font&nbsp;size&nbsp;used&nbsp;and&nbsp;the&nbsp;actual&nbsp;grid&nbsp;height</tt></dd></dl>
+
+<dl><dt><a name="Grid-get_cell"><strong>get_cell</strong></a>(self, x, y, result_type<font color="#909090">='words'</font>)</dt><dd><tt>Return&nbsp;the&nbsp;content&nbsp;of&nbsp;reference&nbsp;(x,y).<br>
+result_type&nbsp;indicates&nbsp;the&nbsp;type&nbsp;of&nbsp;content&nbsp;to&nbsp;return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;words&nbsp;=&nbsp;words&nbsp;placed&nbsp;in&nbsp;the&nbsp;grid<br>
+&nbsp;&nbsp;&nbsp;&nbsp;padding&nbsp;=&nbsp;padding&nbsp;letters<br>
+&nbsp;&nbsp;&nbsp;&nbsp;both&nbsp;=&nbsp;both&nbsp;types&nbsp;of&nbsp;content</tt></dd></dl>
+
+<dl><dt><a name="Grid-get_grid_size"><strong>get_grid_size</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Grid-get_padding_text"><strong>get_padding_text</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;hidden&nbsp;message&nbsp;to&nbsp;be&nbsp;used&nbsp;for&nbsp;blank&nbsp;cells</tt></dd></dl>
+
+<dl><dt><a name="Grid-set_cell"><strong>set_cell</strong></a>(self, x, y, letter)</dt></dl>
+
+<dl><dt><a name="Grid-set_grid_size"><strong>set_grid_size</strong></a>(self, x, y)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Puzzle">class <strong>Puzzle</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>wordsearch&nbsp;puzzle<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Puzzle-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Puzzle-add_word"><strong>add_word</strong></a>(self, name, description<font color="#909090">=None</font>)</dt><dd><tt>add&nbsp;an&nbsp;individual&nbsp;word&nbsp;to&nbsp;the&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="Puzzle-clear_wordlist"><strong>clear_wordlist</strong></a>(self)</dt><dd><tt>Clear&nbsp;the&nbsp;location&nbsp;of&nbsp;all&nbsp;words&nbsp;from&nbsp;the&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="Puzzle-delete_word"><strong>delete_word</strong></a>(self, word_id)</dt><dd><tt>Removes&nbsp;the&nbsp;word&nbsp;with&nbsp;an&nbsp;index&nbsp;of&nbsp;word_id</tt></dd></dl>
+
+<dl><dt><a name="Puzzle-draw_as_cairo"><strong>draw_as_cairo</strong></a>(self, surface, start_x, start_y, size_x, size_y, dpi, show_solution<font color="#909090">=True</font>, selected_word<font color="#909090">=None</font>, show_title<font color="#909090">=True</font>, show_grid<font color="#909090">=True</font>, show_words<font color="#909090">=True</font>)</dt><dd><tt>Draws&nbsp;the&nbsp;entire&nbsp;puzzle&nbsp;onto&nbsp;the&nbsp;Cairo&nbsp;surface.&nbsp;&nbsp;dpi&nbsp;specifies&nbsp;the&nbsp;number&nbsp;of&nbsp;pixels&nbsp;per&nbsp;inch</tt></dd></dl>
+
+<dl><dt><a name="Puzzle-draw_as_text"><strong>draw_as_text</strong></a>(self, show_solution, show_title, show_grid, show_words)</dt><dd><tt>Returns&nbsp;puzzle&nbsp;as&nbsp;a&nbsp;string&nbsp;for&nbsp;subsequent&nbsp;export</tt></dd></dl>
+
+<dl><dt><a name="Puzzle-get_is_forced_size"><strong>get_is_forced_size</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Puzzle-get_narrative"><strong>get_narrative</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Puzzle-get_optimum_size"><strong>get_optimum_size</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;ideal&nbsp;grid&nbsp;size&nbsp;for&nbsp;the&nbsp;words&nbsp;in&nbsp;the&nbsp;puzzle</tt></dd></dl>
+
+<dl><dt><a name="Puzzle-get_title"><strong>get_title</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Puzzle-get_word"><strong>get_word</strong></a>(self, word_id)</dt><dd><tt>Returns&nbsp;the&nbsp;word&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;position&nbsp;in&nbsp;list&nbsp;given&nbsp;by&nbsp;word_id</tt></dd></dl>
+
+<dl><dt><a name="Puzzle-get_word_count"><strong>get_word_count</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Puzzle-get_wordlist"><strong>get_wordlist</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;puzzle's&nbsp;wordlist</tt></dd></dl>
+
+<dl><dt><a name="Puzzle-move_word_up"><strong>move_word_up</strong></a>(self, word_id)</dt><dd><tt>Moves&nbsp;the&nbsp;word&nbsp;with&nbsp;an&nbsp;index&nbsp;of&nbsp;word_id&nbsp;up&nbsp;one&nbsp;place</tt></dd></dl>
+
+<dl><dt><a name="Puzzle-populate_grid"><strong>populate_grid</strong></a>(self)</dt><dd><tt>Place&nbsp;all&nbsp;words&nbsp;on&nbsp;the&nbsp;puzzle&nbsp;grid.&nbsp;&nbsp;Returns&nbsp;True&nbsp;if&nbsp;ssuccessful</tt></dd></dl>
+
+<dl><dt><a name="Puzzle-resize_and_rebuild"><strong>resize_and_rebuild</strong></a>(self)</dt><dd><tt>A&nbsp;word&nbsp;has&nbsp;changed.&nbsp;&nbsp;Recalculate&nbsp;everything.&nbsp;&nbsp;Returns&nbsp;false&nbsp;if&nbsp;all&nbsp;words&nbsp;not&nbsp;placed</tt></dd></dl>
+
+<dl><dt><a name="Puzzle-resize_grid"><strong>resize_grid</strong></a>(self)</dt><dd><tt>Resize&nbsp;the&nbsp;grid&nbsp;and&nbsp;place&nbsp;all&nbsp;the&nbsp;words&nbsp;in&nbsp;it</tt></dd></dl>
+
+<dl><dt><a name="Puzzle-set_is_forced_size"><strong>set_is_forced_size</strong></a>(self, is_forced_size)</dt></dl>
+
+<dl><dt><a name="Puzzle-set_narrative"><strong>set_narrative</strong></a>(self, narrative)</dt></dl>
+
+<dl><dt><a name="Puzzle-set_title"><strong>set_title</strong></a>(self, title)</dt></dl>
+
+<dl><dt><a name="Puzzle-sort_wordlist"><strong>sort_wordlist</strong></a>(self)</dt><dd><tt>Sorts&nbsp;the&nbsp;word&nbsp;list&nbsp;alphabetically</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Word">class <strong>Word</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>word&nbsp;in&nbsp;puzzle<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Word-__init__"><strong>__init__</strong></a>(self, puzzle, word, clue<font color="#909090">=None</font>)</dt><dd><tt>puzzle&nbsp;is&nbsp;the&nbsp;puzzle&nbsp;to&nbsp;which&nbsp;the&nbsp;word&nbsp;is&nbsp;belongs<br>
+word&nbsp;is&nbsp;the&nbsp;word&nbsp;text&nbsp;displayed&nbsp;to&nbsp;the&nbsp;user<br>
+clue&nbsp;is&nbsp;optionally&nbsp;the&nbsp;word&nbsp;as&nbsp;it&nbsp;appears&nbsp;in&nbsp;the&nbsp;word&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="Word-clear"><strong>clear</strong></a>(self)</dt><dd><tt>clear&nbsp;the&nbsp;word's&nbsp;location</tt></dd></dl>
+
+<dl><dt><a name="Word-draw"><strong>draw</strong></a>(self)</dt><dd><tt>draws&nbsp;the&nbsp;word&nbsp;in&nbsp;the&nbsp;puzzle's&nbsp;grid.&nbsp;&nbsp;This&nbsp;method&nbsp;does&nbsp;not&nbsp;update<br>
+the&nbsp;puzzle's&nbsp;hidden&nbsp;message</tt></dd></dl>
+
+<dl><dt><a name="Word-get_clue"><strong>get_clue</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Word-get_coordinates"><strong>get_coordinates</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Word-get_direction"><strong>get_direction</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Word-get_length"><strong>get_length</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Word-get_possible_locations"><strong>get_possible_locations</strong></a>(self)</dt><dd><tt>return&nbsp;a&nbsp;list&nbsp;of&nbsp;possible&nbsp;locations&nbsp;and&nbsp;directions&nbsp;where&nbsp;the&nbsp;word&nbsp;would<br>
+fit&nbsp;if&nbsp;the&nbsp;grid&nbsp;were&nbsp;empty</tt></dd></dl>
+
+<dl><dt><a name="Word-get_word"><strong>get_word</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Word-get_word_alpha"><strong>get_word_alpha</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Word-place"><strong>place</strong></a>(self)</dt><dd><tt>find&nbsp;a&nbsp;free&nbsp;location&nbsp;in&nbsp;the&nbsp;grid&nbsp;and&nbsp;draw&nbsp;the&nbsp;word<br>
+Returns&nbsp;True&nbsp;if&nbsp;successful</tt></dd></dl>
+
+<dl><dt><a name="Word-set_coordinates"><strong>set_coordinates</strong></a>(self, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Word-set_direction"><strong>set_direction</strong></a>(self, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Word-test_draw"><strong>test_draw</strong></a>(self)</dt><dd><tt>checks&nbsp;whether&nbsp;the&nbsp;word&nbsp;will&nbsp;fit&nbsp;in&nbsp;the&nbsp;puzzle's&nbsp;grid</tt></dd></dl>
+
+<dl><dt><a name="Word-update"><strong>update</strong></a>(self, new_word, new_clue)</dt><dd><tt>Change&nbsp;the&nbsp;word&nbsp;and&nbsp;/&nbsp;or&nbsp;description</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-to_alpha"><strong>to_alpha</strong></a>(text)</dt><dd><tt>Remove&nbsp;non-aphabetic&nbsp;characters&nbsp;and&nbsp;switch&nbsp;to&nbsp;lower&nbsp;case</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>BG_COLOUR</strong> = (1, 1, 1)<br>
+<strong>GRID_COLOUR</strong> = (0.5, 0.5, 0.5)<br>
+<strong>PADDING_COLOUR</strong> = (0, 0, 0)<br>
+<strong>SELECTED_COLOUR</strong> = (0.5, 0.0, 0.75, 0.59999999999999998)<br>
+<strong>WORD_COLOUR</strong> = (0.75, 0.0, 0.0, 0.29999999999999999)</td></tr></table>
+</body></html>
