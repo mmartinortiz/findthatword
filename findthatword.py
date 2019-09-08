@@ -47,7 +47,7 @@ try:
     import gobject
     import os
     import cPickle
-    from puzzle import *
+    from ftw.puzzle import *
 except ImportError, error_message:
     error_dialog = gtk.MessageDialog(None
                       , gtk.DIALOG_MODAL | gtk.DIALOG_DESTROY_WITH_PARENT
@@ -75,7 +75,7 @@ class FindThatWord():
         
         #Set the environment variables and default display settings
         self.local_path = os.path.realpath(os.path.dirname(sys.argv[0]))
-        self.gladefile = os.path.join(self.local_path, "findthatword.glade")
+        self.gladefile = os.path.join(self.local_path, 'assets', "findthatword.glade")
         self.show_title = True
         self.show_grid = True
         self.show_words = True
@@ -88,10 +88,10 @@ class FindThatWord():
         
         #Draw the icon.  Unofortunately, not all operating systems can accept SVGs
         if os.name == 'posix':
-            icon_file = os.path.join(self.local_path, "ftw_small.svg")
+            icon_file = os.path.join(self.local_path, 'assets', "ftw_small.svg")
             self.main_window.set_icon_from_file(icon_file)
         else:
-            icon_file = os.path.join(self.local_path, "ftw_small.ico")
+            icon_file = os.path.join(self.local_path, 'assets' "ftw_small.ico")
             self.main_window.set_icon_from_file(icon_file)
             
         #Disable printing support on Windows - the GTK page setup dialogue doesn't
@@ -171,7 +171,7 @@ class FindThatWord():
         
         #Let's celebrate being Welsh
         if self.st_davids_day:
-            stdavids_filename = os.path.join(self.local_path, "stdavids.ftw")
+            stdavids_filename = os.path.join(self.local_path, 'assets', "stdavids.ftw")
             self.load_file(stdavids_filename, "File")
             self.st_davids_day = False
            
